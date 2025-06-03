@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>🕵️‍♂️ Blind Login Challenge</title>
+    <style>
+        body {
+            background-color: #1e1e2f;
+            color: #f0f0f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 100px;
+        }
+        h1 {
+            color: #ffcc00;
+        }
+        form {
+            background-color: #2c2c3e;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #000;
+            width: 320px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 6px;
+            background-color: #444;
+            color: #fff;
+        }
+        input[type="submit"] {
+            background-color: #ffcc00;
+            color: #000;
+            border: none;
+            padding: 10px;
+            width: 100%;
+            font-weight: bold;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #e6b800;
+        }
+        .footer {
+            margin-top: 50px;
+            color: #888;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Blind Login</h1>
+    <form method="POST">
+        <input type="text" name="username" placeholder="Username" required />
+        <input type="password" name="password" placeholder="Password" required />
+        <input type="submit" value="Login" />
+    </form>
+    <div class="footer">
+        <p>Can you login as <code>admin</code>?</p>
+    </div>
+</body>
+</html>
+

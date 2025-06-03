@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Portal</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            background-color: #2d3e50;
+            padding: 15px 30px;
+            color: white;
+            font-size: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar span {
+            font-weight: bold;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: #fff;
+            margin: 80px auto;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .message {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .flag-box {
+            background-color: #f0f8ff;
+            border: 2px dashed #007bff;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 20px;
+            color: #007bff;
+            word-break: break-all;
+        }
+
+        .not-admin {
+            color: #e74c3c;
+            font-weight: bold;
+        }
+
+        a.button {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        a.button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <span>Lockey Company</span>
+        {% if username %}
+            Logged in as: <strong>{{ username }}</strong>
+        {% else %}
+            <a href="/login" style="color:white; text-decoration: underline;">Login</a>
+        {% endif %}
+    </div>
+
+    <div class="container">
+        {% if username %}
+            <h2>Welcome, {{ username }}!</h2>
+            {% if flag %}
+                <div class="message">🎉 You are <strong>admin</strong>. Here is your flag:</div>
+                <div class="flag-box">{{ flag }}</div>
+            {% else %}
+                <div class="message not-admin">❌ You do not have admin privileges.</div>
+                <p>Only admin can view the flag.</p>
+            {% endif %}
+        {% else %}
+            <h2>Welcome!</h2>
+            <p class="message">Please log in to view more details.</p>
+            <a href="/login" class="button">Login</a>
+        {% endif %}
+    </div>
+
+</body>
+</html>
+

@@ -1,0 +1,2 @@
+flag{sql_injection_easy_win}
+

@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  challenge:
+    build: .
+    ports:
+      - "8004:5003"  # 포트 번호는 문제마다 다르게 설정하세요
+

@@ -1,0 +1,7 @@
+version: '3'
+
+services:
+  ez-sqli:
+    build: .
+    ports:
+      - "8002:5001"

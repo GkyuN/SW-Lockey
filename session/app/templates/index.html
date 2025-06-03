@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>KYSec Security Company</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+<style>
+  body, html {
+    margin: 0; padding: 0; height: 100%;
+    font-family: 'Inter', sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+  }
+  header {
+    background-color: #1a1a2e;
+    color: #eee;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    user-select: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav {
+    width: 220px;
+    background-color: #2f3542;
+    height: calc(100vh - 56px); /* header height */
+    padding-top: 1rem;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  nav a {
+    display: block;
+    padding: 12px 24px;
+    color: #cfd4db;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+  }
+  nav a:hover {
+    background-color: #57606f;
+    color: #fff;
+  }
+  nav a.notice {
+    color: #ccc;
+    opacity: 0.01;
+    font-size: 0.5rem;
+    margin-top: auto;
+  }
+  main {
+    margin-left: 220px;
+    padding: 3rem 4rem;
+    min-height: calc(100vh - 56px);
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.12);
+    border-radius: 10px;
+    max-width: 900px;
+    margin-top: 40px;
+  }
+  main h1 {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    color: #1a1a2e;
+    font-weight: 700;
+  }
+  main p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.5rem;
+  }
+  main p strong {
+    color: #4a90e2;
+    font-weight: 700;
+  }
+  main p.highlight {
+    background-color: #eaf4ff;
+    border-left: 6px solid #4a90e2;
+    padding: 1rem 1.2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+  }
+  .account-info {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #eee;
+    user-select: none;
+  }
+  footer {
+    margin-left: 220px;
+    background-color: #1a1a2e;
+    color: #eee;
+    padding: 1rem 3rem;
+    font-size: 0.9rem;
+    user-select: none;
+  }
+  @media (max-width: 768px) {
+    nav {
+      width: 60px;
+      padding-top: 0;
+      height: auto;
+      position: relative;
+    }
+    nav a {
+      padding: 14px 10px;
+      font-size: 0;
+      border-bottom: 1px solid #444;
+    }
+    nav a::before {
+      content: attr(data-icon);
+      font-size: 1.5rem;
+      display: block;
+      text-align: center;
+      margin-bottom: 4px;
+      color: #cfd4db;
+    }
+    nav a:hover {
+      background-color: #57606f;
+      color: #fff;
+    }
+    nav a.notice {
+      color: #ccc;
+      opacity: 0.01;
+      font-size: 0.75rem;
+      font-style: italic;
+    }
+    nav a.notice:hover {
+      backgrount-color: #2f3542;
+      color: #2f3542;
+      opacity:0.1;
+    }
+    main, footer {
+      margin-left: 60px;
+      padding: 1rem;
+      max-width: 100%;
+      margin-top: 20px;
+      border-radius: 0;
+      box-shadow: none;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  KYSec Security Company
+  {% if username %}
+    <div class="account-info">account: {{ username }}</div>
+  {% endif %}
+</header>
+
+<nav>
+  <a href="/" data-icon="🏠">Home</a>
+  <a href="/login" data-icon="🔐">Login</a>
+  <a href="/notice" class="notice" data-icon="📢">Notice</a>
+</nav>
+
+<main>
+  <h1>디지털 시대의 안전한 파트너, <strong>KYSec</strong></h1>
+  <p class="highlight">
+    고객의 소중한 정보를 지키는 <strong>최첨단 사이버 보안 솔루션</strong>을 제공합니다.
+  </p>
+  <p>
+    <strong>KYSec</strong>은 전문적인 보안 기술과 깊은 경험을 바탕으로,
+    기업의 정보 자산을 보호하는 데 최선을 다하고 있습니다. 
+    최신 보안 위협에 신속히 대응하며, 맞춤형 보안 전략을 통해
+    고객의 비즈니스 연속성을 확보합니다.
+  </p>
+  <p>
+    저희는 <strong>침투 테스트</strong>, <strong>취약점 분석</strong>, <strong>보안 컨설팅</strong> 및
+    <strong>위협 인텔리전스</strong> 서비스를 제공하여, 다양한 산업군의 고객들이
+    안전한 디지털 환경을 구축할 수 있도록 지원합니다.
+  </p>
+  <p>
+    또한, 고객과의 신뢰를 최우선으로 생각하며,
+    끊임없는 연구 개발과 최신 기술 도입을 통해 보안의 미래를 선도하고 있습니다.
+  </p>
+  <p>
+    <strong>KYSec</strong>과 함께라면,
+    여러분의 비즈니스는 언제나 한 발 앞서 나갈 수 있습니다.
+  </p>
+
+  <section class="contact">
+    <h2>COntact US</h2>
+    <p>Email: <a href="KYSec@gmail.com">KYSec@gmail.com</a></p>
+    <p>Phone: <a href="TEL:01012345678">+82 10-1234-5678</a></p>
+  </section>
+</main>
+
+<footer>© 2025 KYSec. All rights reserved.</footer>
+
+</body>
+</html>
+
