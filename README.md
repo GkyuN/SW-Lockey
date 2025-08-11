@@ -3,5 +3,5 @@
 
 
 
-![1학년 CTF(1)](image/1.png)
-![1학년 CTF(2)](image/2.png)
+![1학년 CTF(1)](image/1.jpeg)
+![1학년 CTF(2)](image/2.jpeg)
