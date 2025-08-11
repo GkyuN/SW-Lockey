@@ -3,5 +3,7 @@
 
 
 
-![1학년 CTF(1)](image/1.jpeg)
-![1학년 CTF(2)](image/2.jpeg)
+<p float="left">
+  <img src="image/1.jpeg" alt="1학년 CTF(1)" width="300" />
+  <img src="image/2.jpeg" alt="1학년 CTF(2)" width="300" />
+</p>
